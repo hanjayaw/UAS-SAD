@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class BelajarDoang : Form
     {
         int PW;
         bool Hided;
 
 
-        public Form2()
+        public BelajarDoang()
         {
             InitializeComponent();
             PW = PNisi.Width;

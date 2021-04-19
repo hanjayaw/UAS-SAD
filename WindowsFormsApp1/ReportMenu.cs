@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form5 : Form
+    public partial class ReportMenu : Form
     {
-        public Form5()
+        public ReportMenu()
         {
             InitializeComponent();
+        }
+
+        private void ReportMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

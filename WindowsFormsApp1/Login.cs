@@ -10,16 +10,25 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form8 : Form
+    public partial class Login : Form
     {
-        public Form8()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lbpin_Click(object sender, EventArgs e)
         {
-//aku baruinget ini kelihatan
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -57,20 +57,22 @@ namespace WindowsFormsApp1
             // lbnama
             // 
             this.lbnama.AutoSize = true;
+            this.lbnama.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbnama.Location = new System.Drawing.Point(315, 309);
             this.lbnama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbnama.Name = "lbnama";
-            this.lbnama.Size = new System.Drawing.Size(47, 17);
+            this.lbnama.Size = new System.Drawing.Size(54, 21);
             this.lbnama.TabIndex = 0;
             this.lbnama.Text = "NAMA";
             // 
             // lbpin
             // 
             this.lbpin.AutoSize = true;
-            this.lbpin.Location = new System.Drawing.Point(315, 367);
+            this.lbpin.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpin.Location = new System.Drawing.Point(315, 359);
             this.lbpin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbpin.Name = "lbpin";
-            this.lbpin.Size = new System.Drawing.Size(30, 17);
+            this.lbpin.Size = new System.Drawing.Size(29, 17);
             this.lbpin.TabIndex = 1;
             this.lbpin.Text = "PIN";
             this.lbpin.Click += new System.EventHandler(this.lbpin_Click);
@@ -171,7 +173,7 @@ namespace WindowsFormsApp1
             this.BTlogin.Location = new System.Drawing.Point(439, 441);
             this.BTlogin.Margin = new System.Windows.Forms.Padding(4);
             this.BTlogin.Name = "BTlogin";
-            this.BTlogin.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.BTlogin.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.BTlogin.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(73)))), ((int)(((byte)(101)))));
             this.BTlogin.OnHoverTextColor = System.Drawing.Color.Gray;
             this.BTlogin.Size = new System.Drawing.Size(189, 42);

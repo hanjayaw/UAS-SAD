@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form16 : Form
+    public partial class ReportPembelian : Form
     {
-        public Form16()
+        public ReportPembelian()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+//aku baruinget ini kelihatan
         }
     }
 }

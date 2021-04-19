@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form15 : Form
+    public partial class PopUpTambahkanKontak : Form
     {
-        public Form15()
+        public PopUpTambahkanKontak()
         {
             InitializeComponent();
         }
