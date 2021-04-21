@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,7 +68,7 @@ namespace WindowsFormsApp1
             this.label1.Location = new System.Drawing.Point(69, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 36);
+            this.label1.Size = new System.Drawing.Size(88, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Barang";
             // 
@@ -90,7 +91,7 @@ namespace WindowsFormsApp1
             this.label8.Location = new System.Drawing.Point(71, 426);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 36);
+            this.label8.Size = new System.Drawing.Size(66, 29);
             this.label8.TabIndex = 7;
             this.label8.Text = "Total";
             // 
@@ -113,7 +114,7 @@ namespace WindowsFormsApp1
             this.label10.Location = new System.Drawing.Point(71, 231);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(278, 36);
+            this.label10.Size = new System.Drawing.Size(222, 29);
             this.label10.TabIndex = 9;
             this.label10.Text = "Tanggal Pengiriman";
             // 
@@ -124,7 +125,7 @@ namespace WindowsFormsApp1
             this.label11.Location = new System.Drawing.Point(69, 176);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(266, 36);
+            this.label11.Size = new System.Drawing.Size(213, 29);
             this.label11.TabIndex = 10;
             this.label11.Text = "Tanggal Pembelian";
             // 
@@ -135,7 +136,7 @@ namespace WindowsFormsApp1
             this.label12.Location = new System.Drawing.Point(71, 117);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 36);
+            this.label12.Size = new System.Drawing.Size(97, 29);
             this.label12.TabIndex = 11;
             this.label12.Text = "Supplier";
             // 
@@ -146,7 +147,7 @@ namespace WindowsFormsApp1
             this.label13.Location = new System.Drawing.Point(68, 63);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 36);
+            this.label13.Size = new System.Drawing.Size(87, 29);
             this.label13.TabIndex = 12;
             this.label13.Text = "Jumlah";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -200,7 +201,7 @@ namespace WindowsFormsApp1
             this.checkBox1.Location = new System.Drawing.Point(73, 283);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(401, 41);
+            this.checkBox1.Size = new System.Drawing.Size(321, 33);
             this.checkBox1.TabIndex = 19;
             this.checkBox1.Text = "Perubahan Harga Per Item";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -275,11 +276,21 @@ namespace WindowsFormsApp1
             this.dataGridView2.Size = new System.Drawing.Size(779, 769);
             this.dataGridView2.TabIndex = 27;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(451, 455);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 30);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Masukkan Data";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormPembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox6);
@@ -341,5 +352,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button1;
     }
 }
