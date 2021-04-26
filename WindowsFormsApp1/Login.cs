@@ -30,5 +30,23 @@ namespace WindowsFormsApp1
         {
            
         }
+
+        private void BTlogin_Click(object sender, EventArgs e)
+        {
+            var m = new BelajarDoang();
+            m.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var m = new StockBarang();
+            m.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var x = new Form1();
+            x.Show();
+        }
     }
 }

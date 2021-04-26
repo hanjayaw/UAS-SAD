@@ -21,5 +21,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void UbahProduk_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDownsisastock_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

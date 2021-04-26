@@ -53,15 +53,16 @@ namespace WindowsFormsApp1
             this.label1.Text = "Report Pembelian";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form8
+            // ReportPembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name = "Form8";
-            this.Text = "Form8";
+            this.Name = "ReportPembelian";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Report Pembelian";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

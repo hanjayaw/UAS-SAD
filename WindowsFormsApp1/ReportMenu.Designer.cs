@@ -38,6 +38,7 @@ namespace WindowsFormsApp1
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -122,11 +123,22 @@ namespace WindowsFormsApp1
             this.textBox4.Size = new System.Drawing.Size(396, 29);
             this.textBox4.TabIndex = 46;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(258, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(692, 37);
+            this.label5.TabIndex = 47;
+            this.label5.Text = " Cek Report Pembelian / Penjualan / Sisa Stock";
+            // 
             // ReportMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -137,7 +149,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ReportMenu";
-            this.Text = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Report Menu";
             this.Load += new System.EventHandler(this.ReportMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,5 +168,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
     }
 }
