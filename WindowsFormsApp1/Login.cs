@@ -45,8 +45,8 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var x = new Form1();
-            x.Show();
+            FormPenjualan fp = new FormPenjualan();
+            fp.Show();
         }
     }
 }

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\Desktop\16.0v472\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,6 +76,13 @@
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopupTransaksiPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupTransaksiPenjualan.Designer.cs">
+      <DependentUpon>PopupTransaksiPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLFunction.cs" />
     <Compile Include="StockBarang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupTransaksiPenjualan.resx">
+      <DependentUpon>PopupTransaksiPenjualan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockBarang.resx">
       <DependentUpon>StockBarang.cs</DependentUpon>
