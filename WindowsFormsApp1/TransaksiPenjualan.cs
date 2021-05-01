@@ -17,9 +17,11 @@ namespace WindowsFormsApp1
         private SqlFunction sqlFunc;
         string newPenjualanID;
         string numberID;
+        public bool status = false;
         public FormPenjualan()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            FormClosing += formClosed;
         }
 
         //FORM LOAD
@@ -79,6 +81,9 @@ namespace WindowsFormsApp1
 
                 //Refresh Semua Pesanan
                 refreshSemuaPesanan();
+
+                //Clear items
+                clearItems();
             }
             else
             {
@@ -111,6 +116,15 @@ namespace WindowsFormsApp1
         {
             subTotalCalculate();
         }
+        
+        //Form CLosed Event
+        void formClosed(object sender, FormClosingEventArgs e)
+        {
+            if(status == false)
+            {
+                clearDataforRenewal();
+            }
+        }
 
         /*
          ///////////////////////
@@ -126,7 +140,7 @@ namespace WindowsFormsApp1
             barangDt = sqlFunc.selectQuery(sqlQuery);
             barangCombobox.DisplayMember = "Nama Barang";
             barangCombobox.ValueMember = "ID Barang";
-            barangCombobox.DataSource = barangDt;
+            barangCombobox.DataSource = barangDt;            
         }
 
         //Total Label Changes
@@ -173,25 +187,48 @@ namespace WindowsFormsApp1
 
             return clearanceCheck;            
         }
-
-
-        
-
+      
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            string sqlQuery = "DELETE FROM ud_sinar_mas.transaksi_penjualan WHERE penjualan_id = '"+ newPenjualanID +"'";
-            sqlFunc.deleteQuery(sqlQuery);
+            clearDataforRenewal();
 
-            sqlQuery = "DELETE FROM ud_sinar_mas.penjualan_barang_supplier WHERE penjualan_id = '" + newPenjualanID + "'";
-            sqlFunc.deleteQuery(sqlQuery);
-
-            sqlQuery = "ALTER TABLE ud_sinar_mas.transaksi_penjualan AUTO_INCREMENT = "+ numberID +"";
-            sqlFunc.runFunctions(sqlQuery);
-
-            //FOR NOW, INSTANT EXIT
-            Application.Exit();
+            //Refresh Screen
+            clearItems();
         }
 
-        
+        private void clearDataforRenewal()
+        {
+            string sqlQuery = "DELETE FROM ud_sinar_mas.transaksi_penjualan WHERE penjualan_id = '" + newPenjualanID + "'";
+            sqlFunc.deleteQuery(sqlQuery);            
+
+            sqlQuery = "DELETE FROM ud_sinar_mas.penjualan_barang_supplier WHERE penjualan_id = '" + newPenjualanID + "'";
+            sqlFunc.deleteQuery(sqlQuery);            
+
+            sqlQuery = "ALTER TABLE ud_sinar_mas.transaksi_penjualan AUTO_INCREMENT = " + numberID + "";
+            sqlFunc.runFunctions(sqlQuery);            
+        }
+
+        private void selesaiButton_Click(object sender, EventArgs e)
+        {
+            PopupTransaksiPenjualan ptp = new PopupTransaksiPenjualan();
+            ptp.penjualanID = newPenjualanID;
+            ptp.formPenjualan = this;
+            ptp.ShowDialog();           
+        }
+
+        private void clearItems()
+        {
+            //Barang and Supplier Ngikut
+            barangComboboxFill();
+
+            //Jumlah and Subtotal
+            jumlahNumeric.Value = 0;
+            
+        }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

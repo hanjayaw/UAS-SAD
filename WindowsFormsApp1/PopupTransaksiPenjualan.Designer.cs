@@ -41,6 +41,10 @@
             this.hargaBaruText = new System.Windows.Forms.Label();
             this.custTextbox = new System.Windows.Forms.TextBox();
             this.selesaiButton = new System.Windows.Forms.Button();
+            this.alamatTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.teleponTextbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hargaBaruNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bayarNumeric)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +67,7 @@
             0,
             0,
             0});
-            this.hargaBaruNumeric.Location = new System.Drawing.Point(296, 127);
+            this.hargaBaruNumeric.Location = new System.Drawing.Point(296, 196);
             this.hargaBaruNumeric.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -77,7 +81,7 @@
             // jatuhtempoDateTimePicker
             // 
             this.jatuhtempoDateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jatuhtempoDateTimePicker.Location = new System.Drawing.Point(296, 235);
+            this.jatuhtempoDateTimePicker.Location = new System.Drawing.Point(296, 304);
             this.jatuhtempoDateTimePicker.Name = "jatuhtempoDateTimePicker";
             this.jatuhtempoDateTimePicker.Size = new System.Drawing.Size(216, 21);
             this.jatuhtempoDateTimePicker.TabIndex = 72;
@@ -91,7 +95,7 @@
             0,
             0,
             0});
-            this.bayarNumeric.Location = new System.Drawing.Point(296, 199);
+            this.bayarNumeric.Location = new System.Drawing.Point(296, 268);
             this.bayarNumeric.Name = "bayarNumeric";
             this.bayarNumeric.Size = new System.Drawing.Size(216, 21);
             this.bayarNumeric.TabIndex = 71;
@@ -101,7 +105,7 @@
             // 
             this.bayarText.AutoSize = true;
             this.bayarText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bayarText.Location = new System.Drawing.Point(89, 199);
+            this.bayarText.Location = new System.Drawing.Point(89, 268);
             this.bayarText.Name = "bayarText";
             this.bayarText.Size = new System.Drawing.Size(48, 19);
             this.bayarText.TabIndex = 70;
@@ -112,7 +116,7 @@
             // 
             this.jatuhtempoText.AutoSize = true;
             this.jatuhtempoText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jatuhtempoText.Location = new System.Drawing.Point(89, 235);
+            this.jatuhtempoText.Location = new System.Drawing.Point(89, 304);
             this.jatuhtempoText.Name = "jatuhtempoText";
             this.jatuhtempoText.Size = new System.Drawing.Size(102, 19);
             this.jatuhtempoText.TabIndex = 69;
@@ -123,7 +127,7 @@
             // 
             this.hutangCheckbox.AutoSize = true;
             this.hutangCheckbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hutangCheckbox.Location = new System.Drawing.Point(93, 163);
+            this.hutangCheckbox.Location = new System.Drawing.Point(93, 232);
             this.hutangCheckbox.Name = "hutangCheckbox";
             this.hutangCheckbox.Size = new System.Drawing.Size(79, 23);
             this.hutangCheckbox.TabIndex = 68;
@@ -135,7 +139,7 @@
             // 
             this.langgananCheckbox.AutoSize = true;
             this.langgananCheckbox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.langgananCheckbox.Location = new System.Drawing.Point(93, 89);
+            this.langgananCheckbox.Location = new System.Drawing.Point(93, 158);
             this.langgananCheckbox.Name = "langgananCheckbox";
             this.langgananCheckbox.Size = new System.Drawing.Size(105, 23);
             this.langgananCheckbox.TabIndex = 67;
@@ -146,7 +150,7 @@
             // pengirimanDateTimePicker
             // 
             this.pengirimanDateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pengirimanDateTimePicker.Location = new System.Drawing.Point(296, 55);
+            this.pengirimanDateTimePicker.Location = new System.Drawing.Point(296, 124);
             this.pengirimanDateTimePicker.Name = "pengirimanDateTimePicker";
             this.pengirimanDateTimePicker.Size = new System.Drawing.Size(216, 21);
             this.pengirimanDateTimePicker.TabIndex = 66;
@@ -156,7 +160,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(89, 55);
+            this.label10.Location = new System.Drawing.Point(89, 124);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 19);
             this.label10.TabIndex = 65;
@@ -166,7 +170,7 @@
             // 
             this.hargaBaruText.AutoSize = true;
             this.hargaBaruText.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hargaBaruText.Location = new System.Drawing.Point(89, 127);
+            this.hargaBaruText.Location = new System.Drawing.Point(89, 196);
             this.hargaBaruText.Name = "hargaBaruText";
             this.hargaBaruText.Size = new System.Drawing.Size(88, 19);
             this.hargaBaruText.TabIndex = 64;
@@ -177,15 +181,16 @@
             // 
             this.custTextbox.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.custTextbox.Location = new System.Drawing.Point(296, 19);
-            this.custTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.custTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.custTextbox.Name = "custTextbox";
             this.custTextbox.Size = new System.Drawing.Size(216, 20);
             this.custTextbox.TabIndex = 74;
+            this.custTextbox.TextChanged += new System.EventHandler(this.custTextbox_TextChanged);
             // 
             // selesaiButton
             // 
             this.selesaiButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selesaiButton.Location = new System.Drawing.Point(277, 271);
+            this.selesaiButton.Location = new System.Drawing.Point(277, 340);
             this.selesaiButton.Name = "selesaiButton";
             this.selesaiButton.Size = new System.Drawing.Size(86, 29);
             this.selesaiButton.TabIndex = 75;
@@ -193,11 +198,53 @@
             this.selesaiButton.UseVisualStyleBackColor = true;
             this.selesaiButton.Click += new System.EventHandler(this.selesaiButton_Click);
             // 
+            // alamatTextbox
+            // 
+            this.alamatTextbox.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alamatTextbox.Location = new System.Drawing.Point(296, 53);
+            this.alamatTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.alamatTextbox.Name = "alamatTextbox";
+            this.alamatTextbox.Size = new System.Drawing.Size(216, 20);
+            this.alamatTextbox.TabIndex = 77;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(89, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 19);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "Alamat";
+            // 
+            // teleponTextbox
+            // 
+            this.teleponTextbox.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teleponTextbox.Location = new System.Drawing.Point(296, 87);
+            this.teleponTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.teleponTextbox.Name = "teleponTextbox";
+            this.teleponTextbox.Size = new System.Drawing.Size(216, 20);
+            this.teleponTextbox.TabIndex = 78;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(89, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 19);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "Nomor Telepon";
+            // 
             // PopupTransaksiPenjualan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 321);
+            this.ClientSize = new System.Drawing.Size(624, 681);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.teleponTextbox);
+            this.Controls.Add(this.alamatTextbox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.selesaiButton);
             this.Controls.Add(this.custTextbox);
             this.Controls.Add(this.hargaBaruNumeric);
@@ -236,5 +283,9 @@
         private System.Windows.Forms.Label hargaBaruText;
         private System.Windows.Forms.TextBox custTextbox;
         private System.Windows.Forms.Button selesaiButton;
+        private System.Windows.Forms.TextBox alamatTextbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox teleponTextbox;
+        private System.Windows.Forms.Label label2;
     }
 }

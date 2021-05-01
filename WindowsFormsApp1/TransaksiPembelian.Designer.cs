@@ -74,9 +74,9 @@ namespace WindowsFormsApp1
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(640, 50);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(210, 19);
+            this.label6.Size = new System.Drawing.Size(214, 19);
             this.label6.TabIndex = 93;
-            this.label6.Text = "Riwayat Transaksi Penjualan";
+            this.label6.Text = "Riwayat Transaksi Pembelian";
             // 
             // label5
             // 
@@ -115,10 +115,10 @@ namespace WindowsFormsApp1
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(225, 266);
+            this.numericUpDown2.Location = new System.Drawing.Point(338, 296);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(216, 21);
-            this.numericUpDown2.TabIndex = 88;
+            this.numericUpDown2.TabIndex = 66;
             // 
             // label4
             // 
@@ -163,12 +163,12 @@ namespace WindowsFormsApp1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 194);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(334, 331);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 19);
-            this.label2.TabIndex = 82;
-            this.label2.Text = "Jatuh Tempo";
+            this.label2.Size = new System.Drawing.Size(20, 24);
+            this.label2.TabIndex = 67;
+            this.label2.Text = "0";
             this.label2.Visible = false;
             // 
             // checkBox2
@@ -281,23 +281,6 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 95;
             this.label1.Text = "Nota Pembelian";
             // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(338, 296);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(216, 20);
-            this.numericUpDown2.TabIndex = 66;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(334, 331);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 24);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "0";
-            // 
             // FormPembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,7 +310,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPembelian";
-            this.Text = "Transaksi Pembelian";
+            this.Text = "M";
             this.Load += new System.EventHandler(this.FormPembelian_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
