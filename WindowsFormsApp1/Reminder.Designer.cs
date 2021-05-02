@@ -29,29 +29,29 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvbulanini = new System.Windows.Forms.DataGridView();
+            this.dgvbulandepan = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbulanini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbulandepan)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvbulanini
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 98);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1135, 307);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvbulanini.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvbulanini.Location = new System.Drawing.Point(63, 98);
+            this.dgvbulanini.Name = "dgvbulanini";
+            this.dgvbulanini.Size = new System.Drawing.Size(1135, 307);
+            this.dgvbulanini.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvbulandepan
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(63, 516);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1135, 125);
-            this.dataGridView2.TabIndex = 28;
+            this.dgvbulandepan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvbulandepan.Location = new System.Drawing.Point(63, 516);
+            this.dgvbulandepan.Name = "dgvbulandepan";
+            this.dgvbulandepan.Size = new System.Drawing.Size(1135, 125);
+            this.dgvbulandepan.TabIndex = 28;
             // 
             // label1
             // 
@@ -72,7 +72,6 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(218, 33);
             this.label2.TabIndex = 30;
             this.label2.Text = "BULAN DEPAN";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Reminder
             // 
@@ -81,14 +80,14 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvbulandepan);
+            this.Controls.Add(this.dgvbulanini);
             this.Name = "Reminder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reminder";
             this.Load += new System.EventHandler(this.Reminder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbulanini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbulandepan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,8 +95,8 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvbulanini;
+        private System.Windows.Forms.DataGridView dgvbulandepan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

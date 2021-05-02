@@ -29,38 +29,39 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tambah = new System.Windows.Forms.Label();
+            this.dgvkontak = new System.Windows.Forms.DataGridView();
+            this.searchbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvkontak)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // tambah
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1006, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tambahkan Kontak(+)";
+            this.tambah.AutoSize = true;
+            this.tambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tambah.Location = new System.Drawing.Point(1006, 28);
+            this.tambah.Name = "tambah";
+            this.tambah.Size = new System.Drawing.Size(200, 23);
+            this.tambah.TabIndex = 2;
+            this.tambah.Text = "Tambahkan Kontak(+)";
+            this.tambah.Click += new System.EventHandler(this.tambah_Click);
             // 
-            // dataGridView1
+            // dgvkontak
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1161, 562);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvkontak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvkontak.Location = new System.Drawing.Point(45, 77);
+            this.dgvkontak.Name = "dgvkontak";
+            this.dgvkontak.Size = new System.Drawing.Size(1161, 562);
+            this.dgvkontak.TabIndex = 1;
             // 
-            // textBox1
+            // searchbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(221, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 29);
-            this.textBox1.TabIndex = 43;
+            this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbox.Location = new System.Drawing.Point(221, 28);
+            this.searchbox.Name = "searchbox";
+            this.searchbox.Size = new System.Drawing.Size(401, 29);
+            this.searchbox.TabIndex = 43;
             // 
             // label2
             // 
@@ -78,12 +79,12 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.searchbox);
+            this.Controls.Add(this.tambah);
+            this.Controls.Add(this.dgvkontak);
             this.Name = "Kontak";
             this.Text = "Kontak";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvkontak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,9 +92,9 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label tambah;
+        private System.Windows.Forms.DataGridView dgvkontak;
+        private System.Windows.Forms.TextBox searchbox;
         private System.Windows.Forms.Label label2;
     }
 }
