@@ -17,8 +17,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void popupnama_TextChanged(object sender, EventArgs e)
+
+        private void btbatal_Click(object sender, EventArgs e)
         {
+
         }
     }
 }

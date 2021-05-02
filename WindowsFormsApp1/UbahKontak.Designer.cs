@@ -32,12 +32,12 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.ubahnama = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbnotelp = new System.Windows.Forms.TextBox();
+            this.tbalamat = new System.Windows.Forms.TextBox();
+            this.tbnama = new System.Windows.Forms.TextBox();
+            this.btbatal = new System.Windows.Forms.Button();
+            this.btsimpan = new System.Windows.Forms.Button();
+            this.btdelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -70,74 +70,74 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 8;
             this.label1.Text = "Nama";
             // 
-            // textBox3
+            // tbnotelp
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(180, 142);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(396, 29);
-            this.textBox3.TabIndex = 45;
+            this.tbnotelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnotelp.Location = new System.Drawing.Point(180, 142);
+            this.tbnotelp.Name = "tbnotelp";
+            this.tbnotelp.Size = new System.Drawing.Size(396, 29);
+            this.tbnotelp.TabIndex = 45;
             // 
-            // textBox2
+            // tbalamat
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(180, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(396, 29);
-            this.textBox2.TabIndex = 44;
+            this.tbalamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbalamat.Location = new System.Drawing.Point(180, 81);
+            this.tbalamat.Name = "tbalamat";
+            this.tbalamat.Size = new System.Drawing.Size(396, 29);
+            this.tbalamat.TabIndex = 44;
             // 
-            // ubahnama
+            // tbnama
             // 
-            this.ubahnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ubahnama.Location = new System.Drawing.Point(180, 25);
-            this.ubahnama.Name = "ubahnama";
-            this.ubahnama.Size = new System.Drawing.Size(396, 29);
-            this.ubahnama.TabIndex = 43;
+            this.tbnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnama.Location = new System.Drawing.Point(180, 25);
+            this.tbnama.Name = "tbnama";
+            this.tbnama.Size = new System.Drawing.Size(396, 29);
+            this.tbnama.TabIndex = 43;
             // 
-            // button2
+            // btbatal
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(233, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 30);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Batal";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btbatal.BackColor = System.Drawing.Color.Yellow;
+            this.btbatal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbatal.Location = new System.Drawing.Point(233, 206);
+            this.btbatal.Name = "btbatal";
+            this.btbatal.Size = new System.Drawing.Size(143, 30);
+            this.btbatal.TabIndex = 56;
+            this.btbatal.Text = "Batal";
+            this.btbatal.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btsimpan
             // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(72, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 30);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "Simpan";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btsimpan.BackColor = System.Drawing.Color.LawnGreen;
+            this.btsimpan.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsimpan.Location = new System.Drawing.Point(72, 206);
+            this.btsimpan.Name = "btsimpan";
+            this.btsimpan.Size = new System.Drawing.Size(143, 30);
+            this.btsimpan.TabIndex = 55;
+            this.btsimpan.Text = "Simpan";
+            this.btsimpan.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btdelete
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(393, 206);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 30);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btdelete.BackColor = System.Drawing.Color.Red;
+            this.btdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btdelete.Location = new System.Drawing.Point(393, 206);
+            this.btdelete.Name = "btdelete";
+            this.btdelete.Size = new System.Drawing.Size(143, 30);
+            this.btdelete.TabIndex = 54;
+            this.btdelete.Text = "Delete";
+            this.btdelete.UseVisualStyleBackColor = false;
             // 
             // UbahKontak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 248);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.ubahnama);
+            this.Controls.Add(this.btbatal);
+            this.Controls.Add(this.btsimpan);
+            this.Controls.Add(this.btdelete);
+            this.Controls.Add(this.tbnotelp);
+            this.Controls.Add(this.tbalamat);
+            this.Controls.Add(this.tbnama);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -153,11 +153,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        public System.Windows.Forms.TextBox ubahnama;
+        private System.Windows.Forms.TextBox tbnotelp;
+        private System.Windows.Forms.TextBox tbalamat;
+        private System.Windows.Forms.Button btbatal;
+        private System.Windows.Forms.Button btsimpan;
+        private System.Windows.Forms.Button btdelete;
+        public System.Windows.Forms.TextBox tbnama;
     }
 }

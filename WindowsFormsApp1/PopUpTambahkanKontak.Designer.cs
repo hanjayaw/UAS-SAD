@@ -32,11 +32,11 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.popupnama = new System.Windows.Forms.TextBox();
+            this.btbatal = new System.Windows.Forms.Button();
+            this.btsimpan = new System.Windows.Forms.Button();
+            this.tbnotelp = new System.Windows.Forms.TextBox();
+            this.tbalamat = new System.Windows.Forms.TextBox();
+            this.tbnama = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -69,63 +69,63 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 14;
             this.label1.Text = "Nama";
             // 
-            // button2
+            // btbatal
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(338, 215);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 47);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Batal";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btbatal.BackColor = System.Drawing.Color.Red;
+            this.btbatal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbatal.Location = new System.Drawing.Point(338, 215);
+            this.btbatal.Name = "btbatal";
+            this.btbatal.Size = new System.Drawing.Size(164, 47);
+            this.btbatal.TabIndex = 23;
+            this.btbatal.Text = "Batal";
+            this.btbatal.UseVisualStyleBackColor = false;
+            this.btbatal.Click += new System.EventHandler(this.btbatal_Click);
             // 
-            // button1
+            // btsimpan
             // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(113, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 47);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Simpan";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btsimpan.BackColor = System.Drawing.Color.LawnGreen;
+            this.btsimpan.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsimpan.Location = new System.Drawing.Point(113, 215);
+            this.btsimpan.Name = "btsimpan";
+            this.btsimpan.Size = new System.Drawing.Size(164, 47);
+            this.btsimpan.TabIndex = 22;
+            this.btsimpan.Text = "Simpan";
+            this.btsimpan.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // tbnotelp
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(183, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(396, 29);
-            this.textBox3.TabIndex = 42;
+            this.tbnotelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnotelp.Location = new System.Drawing.Point(183, 147);
+            this.tbnotelp.Name = "tbnotelp";
+            this.tbnotelp.Size = new System.Drawing.Size(396, 29);
+            this.tbnotelp.TabIndex = 42;
             // 
-            // textBox2
+            // tbalamat
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(183, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(396, 29);
-            this.textBox2.TabIndex = 41;
+            this.tbalamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbalamat.Location = new System.Drawing.Point(183, 86);
+            this.tbalamat.Name = "tbalamat";
+            this.tbalamat.Size = new System.Drawing.Size(396, 29);
+            this.tbalamat.TabIndex = 41;
             // 
-            // popupnama
+            // tbnama
             // 
-            this.popupnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.popupnama.Location = new System.Drawing.Point(183, 30);
-            this.popupnama.Name = "popupnama";
-            this.popupnama.Size = new System.Drawing.Size(396, 29);
-            this.popupnama.TabIndex = 39;
-            this.popupnama.TextChanged += new System.EventHandler(this.popupnama_TextChanged);
+            this.tbnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnama.Location = new System.Drawing.Point(183, 30);
+            this.tbnama.Name = "tbnama";
+            this.tbnama.Size = new System.Drawing.Size(396, 29);
+            this.tbnama.TabIndex = 39;
             // 
             // PopUpTambahkanKontak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 283);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.popupnama);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbnotelp);
+            this.Controls.Add(this.tbalamat);
+            this.Controls.Add(this.tbnama);
+            this.Controls.Add(this.btbatal);
+            this.Controls.Add(this.btsimpan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -140,10 +140,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox popupnama;
-        public System.Windows.Forms.TextBox textBox3;
-        public System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btbatal;
+        private System.Windows.Forms.Button btsimpan;
+        public System.Windows.Forms.TextBox tbnama;
+        public System.Windows.Forms.TextBox tbnotelp;
+        public System.Windows.Forms.TextBox tbalamat;
     }
 }
