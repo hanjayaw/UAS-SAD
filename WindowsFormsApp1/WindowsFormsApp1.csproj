@@ -52,11 +52,23 @@
     <Compile Include="Button_WOC.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DetailReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailReminder.Designer.cs">
+      <DependentUpon>DetailReminder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KontakSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KontakSupplier.Designer.cs">
+      <DependentUpon>KontakSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -64,17 +76,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kontak.cs">
+    <Compile Include="KontakCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kontak.Designer.cs">
-      <DependentUpon>Kontak.cs</DependentUpon>
+    <Compile Include="KontakCustomer.Designer.cs">
+      <DependentUpon>KontakCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Form11.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form11.Designer.cs">
       <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpTambahkanKontakSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpTambahkanKontakSupplier.Designer.cs">
+      <DependentUpon>PopUpTambahkanKontakSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="PopupTransaksiPenjualan.cs">
       <SubType>Form</SubType>
@@ -95,17 +113,23 @@
     <Compile Include="PopUpTambahkanProduk.Designer.cs">
       <DependentUpon>PopUpTambahkanProduk.cs</DependentUpon>
     </Compile>
-    <Compile Include="UbahKontak.cs">
+    <Compile Include="UbahKontakCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UbahKontak.Designer.cs">
-      <DependentUpon>UbahKontak.cs</DependentUpon>
+    <Compile Include="UbahKontakCustomer.Designer.cs">
+      <DependentUpon>UbahKontakCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopUpTambahkanKontak.cs">
+    <Compile Include="PopUpTambahkanKontakCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopUpTambahkanKontak.Designer.cs">
-      <DependentUpon>PopUpTambahkanKontak.cs</DependentUpon>
+    <Compile Include="PopUpTambahkanKontakCustomer.Designer.cs">
+      <DependentUpon>PopUpTambahkanKontakCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UbahKontakSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UbahKontakSupplier.Designer.cs">
+      <DependentUpon>UbahKontakSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="UbahProduk.cs">
       <SubType>Form</SubType>
@@ -163,17 +187,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DetailReminder.resx">
+      <DependentUpon>DetailReminder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KontakSupplier.resx">
+      <DependentUpon>KontakSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kontak.resx">
-      <DependentUpon>Kontak.cs</DependentUpon>
+    <EmbeddedResource Include="KontakCustomer.resx">
+      <DependentUpon>KontakCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form11.resx">
       <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUpTambahkanKontakSupplier.resx">
+      <DependentUpon>PopUpTambahkanKontakSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupTransaksiPenjualan.resx">
       <DependentUpon>PopupTransaksiPenjualan.cs</DependentUpon>
@@ -184,11 +217,14 @@
     <EmbeddedResource Include="PopUpTambahkanProduk.resx">
       <DependentUpon>PopUpTambahkanProduk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UbahKontak.resx">
-      <DependentUpon>UbahKontak.cs</DependentUpon>
+    <EmbeddedResource Include="UbahKontakCustomer.resx">
+      <DependentUpon>UbahKontakCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopUpTambahkanKontak.resx">
-      <DependentUpon>PopUpTambahkanKontak.cs</DependentUpon>
+    <EmbeddedResource Include="PopUpTambahkanKontakCustomer.resx">
+      <DependentUpon>PopUpTambahkanKontakCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UbahKontakSupplier.resx">
+      <DependentUpon>UbahKontakSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UbahProduk.resx">
       <DependentUpon>UbahProduk.cs</DependentUpon>

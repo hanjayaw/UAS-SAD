@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class PopUpTambahkanKontak
+    partial class PopUpTambahkanKontakCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -91,6 +91,7 @@ namespace WindowsFormsApp1
             this.btsimpan.TabIndex = 22;
             this.btsimpan.Text = "Simpan";
             this.btsimpan.UseVisualStyleBackColor = false;
+            this.btsimpan.Click += new System.EventHandler(this.btsimpan_Click);
             // 
             // tbnotelp
             // 
@@ -99,6 +100,7 @@ namespace WindowsFormsApp1
             this.tbnotelp.Name = "tbnotelp";
             this.tbnotelp.Size = new System.Drawing.Size(396, 29);
             this.tbnotelp.TabIndex = 42;
+            this.tbnotelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbnotelp_KeyPress);
             // 
             // tbalamat
             // 
@@ -116,7 +118,7 @@ namespace WindowsFormsApp1
             this.tbnama.Size = new System.Drawing.Size(396, 29);
             this.tbnama.TabIndex = 39;
             // 
-            // PopUpTambahkanKontak
+            // PopUpTambahkanKontakCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,8 +131,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "PopUpTambahkanKontak";
-            this.Text = "Tambahakan Kontak";
+            this.Name = "PopUpTambahkanKontakCustomer";
+            this.Text = "Tambahakan Kontak Customer";
             this.ResumeLayout(false);
             this.PerformLayout();
 

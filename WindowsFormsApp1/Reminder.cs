@@ -31,29 +31,43 @@ namespace WindowsFormsApp1
             try
             {
                 string connectionString = "server=localhost;uid=root;pwd=;database=ud_sinar_mas";
-                string sqlini = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon'  FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id AND MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) and DAY(tanggal_penjualan) >= DAY(CURRENT_DATE) GROUP BY nama_customer ORDER BY tanggal_penjualan";
-                string sqldepan = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon'  FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id and MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) + 1 GROUP BY nama_customer ORDER BY tanggal_penjualan LIMIT 3";
+                string sqlini = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Edit' as `Ubah` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id AND MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) and DAY(tanggal_penjualan) >= DAY(CURRENT_DATE) GROUP BY nama_customer ORDER BY tanggal_penjualan";
+                string sqldepan = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Edit' as `Ubah` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id and MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) + 1 GROUP BY nama_customer ORDER BY tanggal_penjualan LIMIT 3";
                 MySqlConnection connection = new MySqlConnection(connectionString);
-                MySqlCommand sqlCommand1 = new MySqlCommand(sqlini, connection);
-                MySqlCommand sqlCommand2 = new MySqlCommand(sqldepan, connection);
-                DataSet ds1 = new DataSet();
-                DataSet ds2 = new DataSet();
-                connection.Open();
-                MySqlDataAdapter dataAdapter1 = new MySqlDataAdapter(sqlini, connection);
-                MySqlDataAdapter dataAdapter2 = new MySqlDataAdapter(sqldepan, connection);
-                dataAdapter1.SelectCommand = sqlCommand1;
-                dataAdapter2.SelectCommand = sqlCommand2;
-                dataAdapter1.Fill(ds1);
-                dataAdapter2.Fill(ds2);
-                connection.Close();
-                dgvbulanini.DataSource = ds1;
-                dgvbulandepan.DataSource = ds2;
+                SqlFunction sql = new SqlFunction(connectionString);
+                DataTable data1 = sql.selectQuery(sqlini);
+                DataTable data2 = sql.selectQuery(sqldepan);
+                dgvbulanini.DataSource = data1;
+                dgvbulandepan.DataSource = data2;
+                dgvbulanini.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvbulandepan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvbulanini.Columns["penjualan_id"].Visible = false;
+                dgvbulandepan.Columns["penjualan_id"].Visible = false;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
+        private void dgvbulanini_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.ColumnIndex == 5)
+            {
+                DetailReminder edit = new DetailReminder();
+                edit.tbid.Text = this.dgvbulanini.CurrentRow.Cells[4].Value.ToString();
+                edit.ShowDialog();
+            }
+        }
+
+        private void dgvbulandepan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.ColumnIndex == 5)
+            {
+                DetailReminder edit = new DetailReminder();
+                edit.tbid.Text = this.dgvbulandepan.CurrentRow.Cells[4].Value.ToString();
+                edit.ShowDialog();
+            }
+        }
     }
 }

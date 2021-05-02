@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class Kontak
+    partial class KontakCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -49,11 +49,17 @@ namespace WindowsFormsApp1
             // 
             // dgvkontak
             // 
+            this.dgvkontak.AllowUserToAddRows = false;
+            this.dgvkontak.AllowUserToDeleteRows = false;
+            this.dgvkontak.AllowUserToResizeColumns = false;
+            this.dgvkontak.AllowUserToResizeRows = false;
             this.dgvkontak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvkontak.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvkontak.Location = new System.Drawing.Point(45, 77);
             this.dgvkontak.Name = "dgvkontak";
             this.dgvkontak.Size = new System.Drawing.Size(1161, 562);
             this.dgvkontak.TabIndex = 1;
+            this.dgvkontak.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvkontak_CellClick);
             // 
             // searchbox
             // 
@@ -62,6 +68,7 @@ namespace WindowsFormsApp1
             this.searchbox.Name = "searchbox";
             this.searchbox.Size = new System.Drawing.Size(401, 29);
             this.searchbox.TabIndex = 43;
+            this.searchbox.TextChanged += new System.EventHandler(this.searchbox_TextChanged);
             // 
             // label2
             // 
@@ -73,7 +80,7 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 44;
             this.label2.Text = "Masukan Nama";
             // 
-            // Kontak
+            // KontakCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,8 +89,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.searchbox);
             this.Controls.Add(this.tambah);
             this.Controls.Add(this.dgvkontak);
-            this.Name = "Kontak";
-            this.Text = "Kontak";
+            this.Name = "KontakCustomer";
+            this.Text = "KontakCustomer";
+            this.Load += new System.EventHandler(this.KontakCustomer_load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvkontak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

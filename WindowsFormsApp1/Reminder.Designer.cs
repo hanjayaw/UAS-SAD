@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
             this.dgvbulanini.Name = "dgvbulanini";
             this.dgvbulanini.Size = new System.Drawing.Size(1135, 307);
             this.dgvbulanini.TabIndex = 0;
+            this.dgvbulanini.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbulanini_CellClick);
             // 
             // dgvbulandepan
             // 
@@ -52,6 +53,7 @@ namespace WindowsFormsApp1
             this.dgvbulandepan.Name = "dgvbulandepan";
             this.dgvbulandepan.Size = new System.Drawing.Size(1135, 125);
             this.dgvbulandepan.TabIndex = 28;
+            this.dgvbulandepan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbulandepan_CellClick);
             // 
             // label1
             // 

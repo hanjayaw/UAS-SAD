@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class UbahKontak
+    partial class UbahKontakCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,7 @@ namespace WindowsFormsApp1
             this.btbatal = new System.Windows.Forms.Button();
             this.btsimpan = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
+            this.tbid = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -77,6 +78,7 @@ namespace WindowsFormsApp1
             this.tbnotelp.Name = "tbnotelp";
             this.tbnotelp.Size = new System.Drawing.Size(396, 29);
             this.tbnotelp.TabIndex = 45;
+            this.tbnotelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbnotelp_KeyPress);
             // 
             // tbalamat
             // 
@@ -104,6 +106,7 @@ namespace WindowsFormsApp1
             this.btbatal.TabIndex = 56;
             this.btbatal.Text = "Batal";
             this.btbatal.UseVisualStyleBackColor = false;
+            this.btbatal.Click += new System.EventHandler(this.btbatal_Click);
             // 
             // btsimpan
             // 
@@ -115,6 +118,7 @@ namespace WindowsFormsApp1
             this.btsimpan.TabIndex = 55;
             this.btsimpan.Text = "Simpan";
             this.btsimpan.UseVisualStyleBackColor = false;
+            this.btsimpan.Click += new System.EventHandler(this.btsimpan_Click);
             // 
             // btdelete
             // 
@@ -126,12 +130,22 @@ namespace WindowsFormsApp1
             this.btdelete.TabIndex = 54;
             this.btdelete.Text = "Delete";
             this.btdelete.UseVisualStyleBackColor = false;
+            this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
-            // UbahKontak
+            // tbid
+            // 
+            this.tbid.Location = new System.Drawing.Point(102, 28);
+            this.tbid.Name = "tbid";
+            this.tbid.Size = new System.Drawing.Size(54, 20);
+            this.tbid.TabIndex = 57;
+            this.tbid.Visible = false;
+            // 
+            // UbahKontakCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 248);
+            this.Controls.Add(this.tbid);
             this.Controls.Add(this.btbatal);
             this.Controls.Add(this.btsimpan);
             this.Controls.Add(this.btdelete);
@@ -141,9 +155,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "UbahKontak";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "Ubah Kontak";
+            this.Name = "UbahKontakCustomer";
+            this.Text = "UbahKontakCustomer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,11 +166,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbnotelp;
-        private System.Windows.Forms.TextBox tbalamat;
         private System.Windows.Forms.Button btbatal;
         private System.Windows.Forms.Button btsimpan;
         private System.Windows.Forms.Button btdelete;
         public System.Windows.Forms.TextBox tbnama;
+        public System.Windows.Forms.TextBox tbnotelp;
+        public System.Windows.Forms.TextBox tbalamat;
+        public System.Windows.Forms.TextBox tbid;
     }
 }
