@@ -54,11 +54,17 @@ namespace WindowsFormsApp1
             this.button4.TabIndex = 35;
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // numericUpDownsisastock
             // 
             this.numericUpDownsisastock.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownsisastock.Location = new System.Drawing.Point(187, 182);
+            this.numericUpDownsisastock.Maximum = new decimal(new int[] {
+            -159383552,
+            46653770,
+            5421,
+            0});
             this.numericUpDownsisastock.Name = "numericUpDownsisastock";
             this.numericUpDownsisastock.Size = new System.Drawing.Size(396, 30);
             this.numericUpDownsisastock.TabIndex = 58;
@@ -113,6 +119,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 53;
             this.button2.Text = "Batal";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -124,6 +131,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 52;
             this.button1.Text = "Simpan";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 

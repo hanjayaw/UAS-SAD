@@ -19,6 +19,56 @@ namespace WindowsFormsApp1
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sembarangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pembelianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            FormPembelian fp= new FormPembelian();
+            fp.MdiParent = this;
+            fp.Show();
+            fp.Location = new Point(0, 0);
+        }
+
+        private void penjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            FormPenjualan fj = new FormPenjualan();
+            fj.MdiParent = this;
+            fj.Show();
+            fj.Location = new Point(0, 0);
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            Kontak kt = new Kontak();
+            kt.MdiParent = this;
+            kt.Show();
+            kt.Location = new Point(0, 0);
+        }
+
+        private void reminderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -29,21 +79,28 @@ namespace WindowsFormsApp1
             rm.Location = new Point(0, 0);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sembarangToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            ReportStock rs = new ReportStock();
-            rs.MdiParent = this;
-            rs.Show();
-            rs.Location = new Point(0, 0);
+            StockBarang sb = new StockBarang();
+            sb.MdiParent = this;
+            sb.Show();
+            sb.Location = new Point(0, 0);
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            ReportMenu rn = new ReportMenu();
+            rn.MdiParent = this;
+            rn.Show();
+            rn.Location = new Point(0, 0);
         }
     }
 }
