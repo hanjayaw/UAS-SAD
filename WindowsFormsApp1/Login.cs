@@ -33,8 +33,8 @@ namespace WindowsFormsApp1
 
         private void BTlogin_Click(object sender, EventArgs e)
         {
-            var m = new BelajarDoang();
-            m.Show();
+            var x = new Form1();
+            x.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -45,8 +45,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormPenjualan fp = new FormPenjualan();
-            fp.Show();
+
         }
     }
 }

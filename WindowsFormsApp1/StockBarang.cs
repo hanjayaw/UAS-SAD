@@ -14,11 +14,13 @@ namespace WindowsFormsApp1
 {
     public partial class StockBarang : Form
     {
+        int a;
         public StockBarang()
         {
             InitializeComponent();
+
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             UbahProduk up = new UbahProduk();
@@ -27,9 +29,11 @@ namespace WindowsFormsApp1
             up.numericupdownharga.Text = this.dataGridView1.CurrentRow.Cells[4].Value.ToString();
             up.numericUpDownsisastock.Text = this.dataGridView1.CurrentRow.Cells[2].Value.ToString();
             up.ShowDialog();
+            StockBarang_Load(sender, e);
+            
         }
-
-        private void StockBarang_Load(object sender, EventArgs e)
+        public DataTable dtData = new DataTable();
+        public void StockBarang_Load(object sender, EventArgs e)
         {
             string connectionString = "datasource=localhost;port=3306;user=root;password=;database=uas pak yos";
             string sql = "SELECT nama_supplier, nama_barang, jumlah_barang, harga_jual, harga_beli FROM `barang`, `barang_supplier`, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id";
@@ -41,6 +45,7 @@ namespace WindowsFormsApp1
             connection.Close();
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "Authors_table";
+            dataGridView1.Refresh();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -51,7 +56,24 @@ namespace WindowsFormsApp1
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var z = new Reminder();
-            z.Show();
+            z.ShowDialog();
+            StockBarang_Load(sender, e);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            var f = new PopUpTambahkanProduk();
+            f.ShowDialog();
+            StockBarang_Load(sender, e);
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
