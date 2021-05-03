@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class mdi : Form
     {
-        public Form1()
+        public mdi()
         {
             InitializeComponent();
         }
@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
                 ActiveMdiChild.Close();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            Kontak kt = new Kontak();
+            KontakCustomer kt = new KontakCustomer();
             kt.MdiParent = this;
             kt.Show();
             kt.Location = new Point(0, 0);
@@ -101,6 +101,18 @@ namespace WindowsFormsApp1
             rn.MdiParent = this;
             rn.Show();
             rn.Location = new Point(0, 0);
+        }
+
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
+            KontakSupplier kp = new KontakSupplier();
+            kp.MdiParent = this;
+            kp.Show();
+            kp.Location = new Point(0, 0);
         }
     }
 }

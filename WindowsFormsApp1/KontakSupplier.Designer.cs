@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.searchbox);
             this.Controls.Add(this.tambah);
             this.Controls.Add(this.dgvkontak);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KontakSupplier";
             this.Text = "KontakSupplier";
             this.Load += new System.EventHandler(this.KontakSupplier_Load);

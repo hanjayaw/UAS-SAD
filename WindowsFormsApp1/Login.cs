@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void BTlogin_Click(object sender, EventArgs e)
         {
-            var x = new Form1();
+            var x = new mdi();
             x.Show();
         }
 

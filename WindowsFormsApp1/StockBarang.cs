@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         public DataTable dtData = new DataTable();
         public void StockBarang_Load(object sender, EventArgs e)
         {
-            string connectionString = "datasource=localhost;port=3306;user=root;password=;database=uas pak yos";
+            string connectionString = "datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas";
             string sql = "SELECT nama_supplier, nama_barang, jumlah_barang, harga_jual, harga_beli FROM `barang`, `barang_supplier`, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter dataadapter = new MySqlDataAdapter(sql, connection);

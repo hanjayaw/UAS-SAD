@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class PopUpTambahkanProduk : Form
     {
-        MySqlConnection con = new MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=uas pak yos");
+        MySqlConnection con = new MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas");
         MySqlCommand cmd = new MySqlCommand();
         public PopUpTambahkanProduk()
         {
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         {
             DataTable dt = null;
             DataTable dt1 = null;
-            using (MySqlConnection con = new MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=uas pak yos")) ;
+            using (MySqlConnection con = new MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas")) ;
             {
                 con.Open();
                 string strCmd = "SELECT nama_barang ,barang_id from barang";
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
                     comboBox2.DataSource = dt1;
                 }
             }
-            string connectionString = "datasource=localhost;port=3306;user=root;password=;database=uas pak yos";
+            string connectionString = "datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas";
             string sql = "SELECT nama_supplier, nama_barang, jumlah_barang, harga_jual, harga_beli FROM `barang`, `barang_supplier`, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter dataadapter = new MySqlDataAdapter(sql, connection);
@@ -76,13 +76,13 @@ namespace WindowsFormsApp1
             {
                 if (comboBox2.Text == dataGridView1.Rows[i].Cells[0].Value.ToString() && comboBox1.Text == dataGridView1.Rows[i].Cells[1].Value.ToString())
                 {
-                    MessageBox.Show("duple");
+                    MessageBox.Show("Sudah ada");
                     IsDuplicate = true;
                 }
             }
             if (!IsDuplicate)
             {
-                string connectionString = "datasource=localhost;port=3306;user=root;password=;database=uas pak yos";
+                string connectionString = "datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas";
                 string sql = "INSERT INTO `barang_supplier`(`barang_id`, `supplier_id`, `harga_jual`, `jumlah_barang`) VALUES ('" + comboBox1.SelectedValue + "','" + comboBox2.SelectedValue + "','" + numericUpDown1.Value + "','" + numericUpDown2.Value + "') ";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 MySqlDataAdapter dataadapter = new MySqlDataAdapter(sql, connection);
