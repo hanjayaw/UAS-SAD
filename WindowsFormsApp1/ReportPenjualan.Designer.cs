@@ -29,42 +29,55 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lreport = new System.Windows.Forms.Label();
+            this.dgPenjualan = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPenjualan)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // btnBack
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(513, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Report Penjualan";
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnBack.Location = new System.Drawing.Point(1115, 47);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(100, 30);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // lreport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1196, 539);
-            this.dataGridView1.TabIndex = 1;
+            this.lreport.AutoSize = true;
+            this.lreport.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lreport.Location = new System.Drawing.Point(437, 90);
+            this.lreport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lreport.Name = "lreport";
+            this.lreport.Size = new System.Drawing.Size(359, 45);
+            this.lreport.TabIndex = 4;
+            this.lreport.Text = "REPORT PENJUALAN";
+            // 
+            // dgPenjualan
+            // 
+            this.dgPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPenjualan.Location = new System.Drawing.Point(33, 184);
+            this.dgPenjualan.Name = "dgPenjualan";
+            this.dgPenjualan.RowHeadersWidth = 51;
+            this.dgPenjualan.Size = new System.Drawing.Size(1200, 470);
+            this.dgPenjualan.TabIndex = 5;
             // 
             // ReportPenjualan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgPenjualan);
+            this.Controls.Add(this.lreport);
+            this.Controls.Add(this.btnBack);
             this.Name = "ReportPenjualan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Repor Penjualan";
             this.Load += new System.EventHandler(this.ReportPenjualan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPenjualan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,7 +85,8 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lreport;
+        private System.Windows.Forms.DataGridView dgPenjualan;
     }
 }
