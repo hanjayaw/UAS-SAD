@@ -190,9 +190,9 @@
             // selesaiButton
             // 
             this.selesaiButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selesaiButton.Location = new System.Drawing.Point(277, 340);
+            this.selesaiButton.Location = new System.Drawing.Point(277, 350);
             this.selesaiButton.Name = "selesaiButton";
-            this.selesaiButton.Size = new System.Drawing.Size(86, 29);
+            this.selesaiButton.Size = new System.Drawing.Size(86, 30);
             this.selesaiButton.TabIndex = 75;
             this.selesaiButton.Text = "Selesai\r\n\r\n";
             this.selesaiButton.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 681);
+            this.ClientSize = new System.Drawing.Size(624, 411);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.teleponTextbox);
             this.Controls.Add(this.alamatTextbox);

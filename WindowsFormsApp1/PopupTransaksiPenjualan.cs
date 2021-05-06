@@ -151,11 +151,15 @@ namespace WindowsFormsApp1
                 sqlQuery = "UPDATE ud_sinar_mas.transaksi_penjualan SET customer_id = '"+ idCustomer +"', grand_total = '"+ grandTotal +"', tanggal_penjualan = '"+ tanggalPengiriman +"', pembayaran_id = '"+ pembayaranId +"', total_bayar = '"+ totalBayar +"', tanggal_jatuh_tempo = '"+ tanggalJatuhTempo +"', status = '"+ status +"' WHERE penjualan_id = '"+ idPenjualan +"'";
                 sqlFunc.updateQuery(sqlQuery);
 
+
+
+                //Update Stock
+                StockReduction();
+
                 //After insert event
-                FormPenjualan fpNew = new FormPenjualan();
+                
                 formPenjualan.status = true;
-                formPenjualan.Close();
-                fpNew.Show();
+                formPenjualan.TransaksiPenjualan_OnLoad(sender, e);                
                 this.Close();
 
             }
@@ -185,8 +189,6 @@ namespace WindowsFormsApp1
                 alamatTextbox.Text = "";
                 teleponTextbox.Text = "";
             }
-
-
         }
 
         /*
@@ -194,6 +196,20 @@ namespace WindowsFormsApp1
           Functions and Procedures
         ///////////////////////////
         */
+
+        private void StockReduction()
+        {
+            string sqlQuery;
+            int itemCount = formPenjualan.counter;
+            string[] barangsupplierId = formPenjualan.barangsupplierIdPublic;
+            int[] reductionAmmount = formPenjualan.ammountToReduce;
+            for(int items = 0; items < itemCount; items++)
+            {
+                sqlQuery = "UPDATE ud_sinar_mas.barang_supplier SET jumlah_barang = jumlah_barang - "+ reductionAmmount[items].ToString() +" WHERE barang_supplier_id = '"+ barangsupplierId[items] +"'";
+                sqlFunc.updateQuery(sqlQuery);
+            }
+
+        }
 
         private void custInfoEnabler()
         {

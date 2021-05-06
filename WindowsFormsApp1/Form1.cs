@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
                 ActiveMdiChild.Close();
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            FormPenjualan fj = new FormPenjualan();
+            FormPenjualan fj = new FormPenjualan();            
             fj.MdiParent = this;
             fj.Show();
             fj.Location = new Point(0, 0);
@@ -113,6 +113,6 @@ namespace WindowsFormsApp1
             kp.MdiParent = this;
             kp.Show();
             kp.Location = new Point(0, 0);
-        }
+        }        
     }
 }

@@ -18,6 +18,10 @@ namespace WindowsFormsApp1
         string newPenjualanID;
         string numberID;
         public bool status = false;
+        public string[] barangsupplierIdPublic = new string[100];
+        public int[] ammountToReduce = new int[100];
+        public int counter = 0;
+
         public FormPenjualan()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace WindowsFormsApp1
         }
 
         //FORM LOAD
-        private void TransaksiPenjualan_OnLoad(object sender, EventArgs e)
+        public void TransaksiPenjualan_OnLoad(object sender, EventArgs e)
         {
             //Get SQL Command Objects
             sqlFunc = new SqlFunction(connString);
@@ -38,9 +42,7 @@ namespace WindowsFormsApp1
             DataTable maxID = new DataTable();
             maxID = sqlFunc.selectQuery(sqlQuery);
             numberID = maxID.Rows[0]["MAX"].ToString();
-            newPenjualanID = "J" + numberID;
-            
-            subnotaDataGridView.DataSource = newPenjualanID;
+            newPenjualanID = "J" + numberID;                       
 
             //Fill Riwayat Transaksi Penjualan
             refreshRiwayatTransaksiPenjualan();
@@ -82,6 +84,9 @@ namespace WindowsFormsApp1
                 //Refresh Semua Pesanan
                 refreshSemuaPesanan();
 
+                //Stock Reduction
+                StockReduction();
+
                 //Clear items
                 clearItems();
             }
@@ -115,6 +120,7 @@ namespace WindowsFormsApp1
         private void supplierCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             subTotalCalculate();
+            JumlahNumericChangeMaxValue();
         }
         
         //Form CLosed Event
@@ -131,6 +137,33 @@ namespace WindowsFormsApp1
          Procedure and Functions
          ///////////////////////
          */
+
+        private void JumlahNumericChangeMaxValue()
+        {
+            string barangID = barangCombobox.SelectedValue.ToString();
+            string supplierID = supplierCombobox.SelectedValue.ToString();
+            string sqlQuery = "SELECT bs.barang_supplier_id `ID`, bs.jumlah_barang `Jumlah` FROM ud_sinar_mas.barang_supplier bs WHERE bs.barang_id = '" + barangID + "' AND bs.supplier_id = '" + supplierID + "'";
+            DataTable idDt = sqlFunc.selectQuery(sqlQuery);
+            int stockSekarang = Convert.ToInt32(idDt.Rows[0]["Jumlah"]);
+            jumlahNumeric.Maximum = stockSekarang;
+            jumlahNumeric.Value = 0;
+
+        }
+
+        private void StockReduction()
+        {
+            string barangID = barangCombobox.SelectedValue.ToString();
+            string supplierID = supplierCombobox.SelectedValue.ToString();
+            string sqlQuery = "SELECT bs.barang_supplier_id `ID`, bs.jumlah_barang `Jumlah` FROM ud_sinar_mas.barang_supplier bs WHERE bs.barang_id = '" + barangID + "' AND bs.supplier_id = '" + supplierID + "'";
+            DataTable idDt = sqlFunc.selectQuery(sqlQuery);
+            string barangsupplierID = idDt.Rows[0]["ID"].ToString();           
+            int stockKurangi = Convert.ToInt32(jumlahNumeric.Value);
+
+            barangsupplierIdPublic[counter] = barangsupplierID;
+            ammountToReduce[counter] = stockKurangi;
+
+            counter++;
+        }
 
         private void barangComboboxFill()
         {
@@ -194,6 +227,9 @@ namespace WindowsFormsApp1
 
             //Refresh Screen
             clearItems();
+
+            //Refresh Semua Pesanan
+            refreshSemuaPesanan();
         }
 
         private void clearDataforRenewal()
@@ -224,11 +260,6 @@ namespace WindowsFormsApp1
             //Jumlah and Subtotal
             jumlahNumeric.Value = 0;
             
-        }
-
-        private void newButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

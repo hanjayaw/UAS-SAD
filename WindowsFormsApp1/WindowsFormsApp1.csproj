@@ -88,6 +88,12 @@
     <Compile Include="PopUpTambahkanKontakSupplier.Designer.cs">
       <DependentUpon>PopUpTambahkanKontakSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="PopupTransaksiPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupTransaksiPembelian.Designer.cs">
+      <DependentUpon>PopupTransaksiPembelian.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopupTransaksiPenjualan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PopUpTambahkanKontakSupplier.resx">
       <DependentUpon>PopUpTambahkanKontakSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupTransaksiPembelian.resx">
+      <DependentUpon>PopupTransaksiPembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupTransaksiPenjualan.resx">
       <DependentUpon>PopupTransaksiPenjualan.cs</DependentUpon>

@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 374);
+            this.label8.Location = new System.Drawing.Point(19, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 19);
             this.label8.TabIndex = 34;
@@ -141,10 +141,10 @@ namespace WindowsFormsApp1
             // subnotaDataGridView
             // 
             this.subnotaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.subnotaDataGridView.Location = new System.Drawing.Point(19, 488);
+            this.subnotaDataGridView.Location = new System.Drawing.Point(23, 252);
             this.subnotaDataGridView.Name = "subnotaDataGridView";
             this.subnotaDataGridView.RowHeadersWidth = 51;
-            this.subnotaDataGridView.Size = new System.Drawing.Size(526, 162);
+            this.subnotaDataGridView.Size = new System.Drawing.Size(526, 398);
             this.subnotaDataGridView.TabIndex = 57;
             // 
             // allNotaDataGridView
@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             // 
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(226, 374);
+            this.totalLabel.Location = new System.Drawing.Point(226, 158);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(18, 19);
@@ -170,8 +170,8 @@ namespace WindowsFormsApp1
             // insertButton
             // 
             this.insertButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertButton.Location = new System.Drawing.Point(266, 444);
-            this.insertButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.insertButton.Location = new System.Drawing.Point(266, 194);
+            this.insertButton.Margin = new System.Windows.Forms.Padding(2);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(136, 29);
             this.insertButton.TabIndex = 64;
@@ -183,7 +183,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 466);
+            this.label5.Location = new System.Drawing.Point(19, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 19);
             this.label5.TabIndex = 65;
@@ -193,7 +193,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(641, 50);
+            this.label6.Location = new System.Drawing.Point(640, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(210, 19);
             this.label6.TabIndex = 66;
@@ -203,7 +203,7 @@ namespace WindowsFormsApp1
             // 
             this.selesaiButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selesaiButton.Location = new System.Drawing.Point(19, 655);
-            this.selesaiButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.selesaiButton.Margin = new System.Windows.Forms.Padding(2);
             this.selesaiButton.Name = "selesaiButton";
             this.selesaiButton.Size = new System.Drawing.Size(136, 30);
             this.selesaiButton.TabIndex = 67;
@@ -216,6 +216,7 @@ namespace WindowsFormsApp1
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(18, 9);
+            this.label14.Margin = new System.Windows.Forms.Padding(2);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(135, 19);
             this.label14.TabIndex = 96;
@@ -225,7 +226,7 @@ namespace WindowsFormsApp1
             // 
             this.cancelButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.Location = new System.Drawing.Point(409, 655);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(136, 30);
             this.cancelButton.TabIndex = 97;
@@ -258,7 +259,6 @@ namespace WindowsFormsApp1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPenjualan";
             this.Text = " ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TransaksiPenjualan_OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.jumlahNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subnotaDataGridView)).EndInit();
