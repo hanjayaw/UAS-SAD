@@ -31,16 +31,20 @@ namespace WindowsFormsApp1
             try
             {
                 string connectionString = "server=localhost;uid=root;pwd=;database=ud_sinar_mas";
-                string sqlini = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Edit' as `Ubah` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id AND MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) and DAY(tanggal_penjualan) >= DAY(CURRENT_DATE) GROUP BY nama_customer ORDER BY tanggal_penjualan";
-                string sqldepan = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Edit' as `Ubah` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id and MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) + 1 GROUP BY nama_customer ORDER BY tanggal_penjualan LIMIT 3";
+                string sqlini = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Detail' as `Cek` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id AND MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) and DAY(tanggal_penjualan) >= DAY(CURRENT_DATE) GROUP BY nama_customer ORDER BY tanggal_penjualan";
+                string sqldepan = "SELECT tanggal_penjualan 'Tanggal' , nama_customer 'Pembeli', alamat 'Alamat' , no_telepon 'Nomor Telepon', transaksi_penjualan.penjualan_id, 'Detail' as `Cek` FROM transaksi_penjualan, penjualan_barang_supplier, customer, barang WHERE transaksi_penjualan.customer_id = customer.customer_id AND penjualan_barang_supplier.penjualan_id = transaksi_penjualan.penjualan_id and MONTH(tanggal_penjualan) = MONTH(CURRENT_DATE) + 1 GROUP BY nama_customer ORDER BY tanggal_penjualan LIMIT 3";
+                string sqlutang = "SELECT nama_customer 'Customer', grand_total 'Total Penjualan', total_bayar 'Total Pembayaran', (grand_total - total_bayar) 'Sisah Pembayaran', tanggal_jatuh_tempo 'Jatuh Tempo' FROM customer, transaksi_penjualan WHERE `status` = 0 AND customer.customer_id = transaksi_penjualan.customer_id AND DAY(tanggal_jatuh_tempo) >= DAY(CURRENT_DATE)";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 SqlFunction sql = new SqlFunction(connectionString);
                 DataTable data1 = sql.selectQuery(sqlini);
                 DataTable data2 = sql.selectQuery(sqldepan);
+                DataTable data3 = sql.selectQuery(sqlutang);
                 dgvbulanini.DataSource = data1;
                 dgvbulandepan.DataSource = data2;
+                dgvutang.DataSource = data3;
                 dgvbulanini.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvbulandepan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvutang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvbulanini.Columns["penjualan_id"].Visible = false;
                 dgvbulandepan.Columns["penjualan_id"].Visible = false;
             }
@@ -56,6 +60,9 @@ namespace WindowsFormsApp1
             {
                 DetailReminder edit = new DetailReminder();
                 edit.tbid.Text = this.dgvbulanini.CurrentRow.Cells[4].Value.ToString();
+                edit.labelnama.Text = dgvbulanini.CurrentRow.Cells[1].Value.ToString();
+                edit.labelalamat.Text = dgvbulanini.CurrentRow.Cells[2].Value.ToString();
+                edit.labelnotelp.Text = dgvbulanini.CurrentRow.Cells[3].Value.ToString();
                 edit.ShowDialog();
             }
         }
