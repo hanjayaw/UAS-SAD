@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             // 
             this.tambah.AutoSize = true;
             this.tambah.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tambah.Location = new System.Drawing.Point(1006, 28);
+            this.tambah.Location = new System.Drawing.Point(1013, 35);
             this.tambah.Name = "tambah";
             this.tambah.Size = new System.Drawing.Size(200, 23);
             this.tambah.TabIndex = 2;
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             this.dgvkontak.AllowUserToResizeRows = false;
             this.dgvkontak.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvkontak.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvkontak.Location = new System.Drawing.Point(45, 77);
+            this.dgvkontak.Location = new System.Drawing.Point(52, 84);
             this.dgvkontak.Name = "dgvkontak";
             this.dgvkontak.Size = new System.Drawing.Size(1161, 562);
             this.dgvkontak.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             // searchbox
             // 
             this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbox.Location = new System.Drawing.Point(221, 28);
+            this.searchbox.Location = new System.Drawing.Point(228, 35);
             this.searchbox.Name = "searchbox";
             this.searchbox.Size = new System.Drawing.Size(401, 29);
             this.searchbox.TabIndex = 43;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 28);
+            this.label2.Location = new System.Drawing.Point(60, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 25);
             this.label2.TabIndex = 44;
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchbox);
             this.Controls.Add(this.tambah);
