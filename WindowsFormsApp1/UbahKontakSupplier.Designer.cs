@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             // 
             // tbid
             // 
-            this.tbid.Location = new System.Drawing.Point(109, 22);
+            this.tbid.Location = new System.Drawing.Point(102, 27);
             this.tbid.Name = "tbid";
             this.tbid.Size = new System.Drawing.Size(54, 20);
             this.tbid.TabIndex = 67;
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
             // 
             this.btbatal.BackColor = System.Drawing.Color.Yellow;
             this.btbatal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbatal.Location = new System.Drawing.Point(240, 200);
+            this.btbatal.Location = new System.Drawing.Point(233, 205);
             this.btbatal.Name = "btbatal";
             this.btbatal.Size = new System.Drawing.Size(143, 30);
             this.btbatal.TabIndex = 66;
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             // 
             this.btsimpan.BackColor = System.Drawing.Color.LawnGreen;
             this.btsimpan.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsimpan.Location = new System.Drawing.Point(79, 200);
+            this.btsimpan.Location = new System.Drawing.Point(72, 205);
             this.btsimpan.Name = "btsimpan";
             this.btsimpan.Size = new System.Drawing.Size(143, 30);
             this.btsimpan.TabIndex = 65;
@@ -77,7 +77,7 @@ namespace WindowsFormsApp1
             // 
             this.btdelete.BackColor = System.Drawing.Color.Red;
             this.btdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdelete.Location = new System.Drawing.Point(400, 200);
+            this.btdelete.Location = new System.Drawing.Point(393, 205);
             this.btdelete.Name = "btdelete";
             this.btdelete.Size = new System.Drawing.Size(143, 30);
             this.btdelete.TabIndex = 64;
@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
             // tbnotelp
             // 
             this.tbnotelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnotelp.Location = new System.Drawing.Point(187, 136);
+            this.tbnotelp.Location = new System.Drawing.Point(180, 141);
             this.tbnotelp.Name = "tbnotelp";
             this.tbnotelp.Size = new System.Drawing.Size(396, 29);
             this.tbnotelp.TabIndex = 63;
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             // tbalamat
             // 
             this.tbalamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbalamat.Location = new System.Drawing.Point(187, 75);
+            this.tbalamat.Location = new System.Drawing.Point(180, 80);
             this.tbalamat.Name = "tbalamat";
             this.tbalamat.Size = new System.Drawing.Size(396, 29);
             this.tbalamat.TabIndex = 62;
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             // tbnama
             // 
             this.tbnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnama.Location = new System.Drawing.Point(187, 19);
+            this.tbnama.Location = new System.Drawing.Point(180, 24);
             this.tbnama.Name = "tbnama";
             this.tbnama.Size = new System.Drawing.Size(396, 29);
             this.tbnama.TabIndex = 61;
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 131);
+            this.label3.Location = new System.Drawing.Point(17, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 60;
@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 73);
+            this.label2.Location = new System.Drawing.Point(17, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 23);
             this.label2.TabIndex = 59;
@@ -134,7 +134,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 19);
+            this.label1.Location = new System.Drawing.Point(17, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 23);
             this.label1.TabIndex = 58;
