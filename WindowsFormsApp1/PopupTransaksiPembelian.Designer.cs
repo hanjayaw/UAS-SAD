@@ -39,9 +39,10 @@ namespace WindowsFormsApp1
             // selesaiButton
             // 
             this.selesaiButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selesaiButton.Location = new System.Drawing.Point(241, 146);
+            this.selesaiButton.Location = new System.Drawing.Point(321, 180);
+            this.selesaiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selesaiButton.Name = "selesaiButton";
-            this.selesaiButton.Size = new System.Drawing.Size(130, 30);
+            this.selesaiButton.Size = new System.Drawing.Size(173, 37);
             this.selesaiButton.TabIndex = 80;
             this.selesaiButton.Text = "Selesai\r\n\r\n";
             this.selesaiButton.UseVisualStyleBackColor = true;
@@ -50,27 +51,32 @@ namespace WindowsFormsApp1
             // jatuhtempoDateTimePicker
             // 
             this.jatuhtempoDateTimePicker.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jatuhtempoDateTimePicker.Location = new System.Drawing.Point(291, 87);
+            this.jatuhtempoDateTimePicker.Location = new System.Drawing.Point(388, 107);
+            this.jatuhtempoDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jatuhtempoDateTimePicker.Name = "jatuhtempoDateTimePicker";
-            this.jatuhtempoDateTimePicker.Size = new System.Drawing.Size(263, 27);
+            this.jatuhtempoDateTimePicker.Size = new System.Drawing.Size(349, 32);
             this.jatuhtempoDateTimePicker.TabIndex = 79;
+            this.jatuhtempoDateTimePicker.Visible = false;
             // 
             // jatuhtempoText
             // 
             this.jatuhtempoText.AutoSize = true;
             this.jatuhtempoText.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jatuhtempoText.Location = new System.Drawing.Point(44, 83);
+            this.jatuhtempoText.Location = new System.Drawing.Point(59, 102);
+            this.jatuhtempoText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.jatuhtempoText.Name = "jatuhtempoText";
-            this.jatuhtempoText.Size = new System.Drawing.Size(134, 25);
+            this.jatuhtempoText.Size = new System.Drawing.Size(170, 33);
             this.jatuhtempoText.TabIndex = 78;
             this.jatuhtempoText.Text = "Jatuh Tempo";
+            this.jatuhtempoText.Visible = false;
             // 
             // pengirimanDateTimePicker
             // 
             this.pengirimanDateTimePicker.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pengirimanDateTimePicker.Location = new System.Drawing.Point(291, 48);
+            this.pengirimanDateTimePicker.Location = new System.Drawing.Point(388, 59);
+            this.pengirimanDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pengirimanDateTimePicker.Name = "pengirimanDateTimePicker";
-            this.pengirimanDateTimePicker.Size = new System.Drawing.Size(263, 27);
+            this.pengirimanDateTimePicker.Size = new System.Drawing.Size(349, 32);
             this.pengirimanDateTimePicker.TabIndex = 77;
             this.pengirimanDateTimePicker.ValueChanged += new System.EventHandler(this.pengirimanDateTimePicker_ValueChanged);
             // 
@@ -78,23 +84,25 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(44, 48);
+            this.label10.Location = new System.Drawing.Point(59, 59);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(200, 25);
+            this.label10.Size = new System.Drawing.Size(251, 33);
             this.label10.TabIndex = 76;
             this.label10.Text = "Tanggal Pengiriman";
             // 
             // PopupTransaksiPembelian
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 206);
+            this.ClientSize = new System.Drawing.Size(832, 254);
             this.Controls.Add(this.selesaiButton);
             this.Controls.Add(this.jatuhtempoDateTimePicker);
             this.Controls.Add(this.jatuhtempoText);
             this.Controls.Add(this.pengirimanDateTimePicker);
             this.Controls.Add(this.label10);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PopupTransaksiPembelian";
             this.Text = "PopupTransaksiPembelian";
             this.Load += new System.EventHandler(this.PopupTransaksiPembelian_Load);

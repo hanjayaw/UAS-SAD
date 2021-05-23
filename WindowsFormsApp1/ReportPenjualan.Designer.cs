@@ -29,40 +29,29 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBack = new System.Windows.Forms.Button();
             this.lreport = new System.Windows.Forms.Label();
             this.dgPenjualan = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgPenjualan)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnBack.Location = new System.Drawing.Point(1115, 47);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 30);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
             // lreport
             // 
             this.lreport.AutoSize = true;
-            this.lreport.Font = new System.Drawing.Font("Tahoma", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lreport.Location = new System.Drawing.Point(437, 90);
+            this.lreport.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lreport.Location = new System.Drawing.Point(524, 37);
             this.lreport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lreport.Name = "lreport";
-            this.lreport.Size = new System.Drawing.Size(359, 45);
+            this.lreport.Size = new System.Drawing.Size(219, 33);
             this.lreport.TabIndex = 4;
-            this.lreport.Text = "REPORT PENJUALAN";
+            this.lreport.Text = "Report Penjualan";
             // 
             // dgPenjualan
             // 
             this.dgPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPenjualan.Location = new System.Drawing.Point(33, 184);
+            this.dgPenjualan.Location = new System.Drawing.Point(12, 92);
             this.dgPenjualan.Name = "dgPenjualan";
             this.dgPenjualan.RowHeadersWidth = 51;
-            this.dgPenjualan.Size = new System.Drawing.Size(1200, 470);
+            this.dgPenjualan.Size = new System.Drawing.Size(1240, 577);
             this.dgPenjualan.TabIndex = 5;
             // 
             // ReportPenjualan
@@ -72,7 +61,6 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.dgPenjualan);
             this.Controls.Add(this.lreport);
-            this.Controls.Add(this.btnBack);
             this.Name = "ReportPenjualan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Repor Penjualan";
@@ -84,8 +72,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lreport;
         private System.Windows.Forms.DataGridView dgPenjualan;
     }
