@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
             sqlQuery = "INSERT INTO ud_sinar_mas.transaksi_pembelian(tanggal_pembelian) VALUES (NOW())";
             sqlFunc.insertQuery(sqlQuery);
 
-            sqlQuery = "SELECT MAX(auto_num) `MAX` FROM ud_sinar_mas.transaksi_pembelian";
+            sqlQuery = "SELECT COALESCE(MAX(auto_num), 0) `MAX` FROM ud_sinar_mas.transaksi_pembelian";
             DataTable maxID = new DataTable();
             maxID = sqlFunc.selectQuery(sqlQuery);
             numberID = maxID.Rows[0]["MAX"].ToString();
@@ -175,8 +175,6 @@ namespace WindowsFormsApp1
                 sqlQuery = "SELECT barang_supplier_id `ID` FROM ud_sinar_mas.barang_supplier WHERE barang_id = '"+ barangId +"' AND supplier_id = '"+ supplierId +"'";
                 DataTable barangsupplierDt = sqlFunc.selectQuery(sqlQuery);
                 barangsupplierId = barangsupplierDt.Rows[0]["ID"].ToString();
-
-
                 //Subtotal
                 subtotalPembelian = totalLabel.Text;
 

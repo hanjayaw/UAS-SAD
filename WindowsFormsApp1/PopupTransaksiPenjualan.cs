@@ -107,7 +107,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    sqlQuery = "INSERT INTO ud_sinar_mas.customer(`nama_customer`, `alamat`, `no_telepon`) VALUES ('"+ custTextbox.Text + "', '" + alamatTextbox + "', '" + teleponTextbox.Text +"')";
+                    sqlQuery = "INSERT INTO ud_sinar_mas.customer(`nama_customer`, `alamat`, `no_telepon`) VALUES ('"+ custTextbox.Text + "', '" + alamatTextbox.Text + "', '" + teleponTextbox.Text +"')";
                     sqlFunc.insertQuery(sqlQuery);
 
                     sqlQuery = "SELECT MAX(auto_num) `Nomor ID` FROM ud_sinar_mas.customer";
@@ -156,9 +156,8 @@ namespace WindowsFormsApp1
                 //Update Stock
                 StockReduction();
 
-                //After insert event
-                
-                formPenjualan.status = true;
+                //After insert event                
+                //formPenjualan.status = true;
                 formPenjualan.TransaksiPenjualan_OnLoad(sender, e);                
                 this.Close();
 
