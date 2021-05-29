@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             // 
             this.selesaiButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selesaiButton.Location = new System.Drawing.Point(321, 180);
-            this.selesaiButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selesaiButton.Margin = new System.Windows.Forms.Padding(4);
             this.selesaiButton.Name = "selesaiButton";
             this.selesaiButton.Size = new System.Drawing.Size(173, 37);
             this.selesaiButton.TabIndex = 80;
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             // 
             this.jatuhtempoDateTimePicker.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jatuhtempoDateTimePicker.Location = new System.Drawing.Point(388, 107);
-            this.jatuhtempoDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jatuhtempoDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.jatuhtempoDateTimePicker.Name = "jatuhtempoDateTimePicker";
             this.jatuhtempoDateTimePicker.Size = new System.Drawing.Size(349, 32);
             this.jatuhtempoDateTimePicker.TabIndex = 79;
@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
             // 
             this.pengirimanDateTimePicker.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pengirimanDateTimePicker.Location = new System.Drawing.Point(388, 59);
-            this.pengirimanDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pengirimanDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.pengirimanDateTimePicker.Name = "pengirimanDateTimePicker";
             this.pengirimanDateTimePicker.Size = new System.Drawing.Size(349, 32);
             this.pengirimanDateTimePicker.TabIndex = 77;
@@ -101,8 +101,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.jatuhtempoText);
             this.Controls.Add(this.pengirimanDateTimePicker);
             this.Controls.Add(this.label10);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PopupTransaksiPembelian";
             this.Text = "PopupTransaksiPembelian";
             this.Load += new System.EventHandler(this.PopupTransaksiPembelian_Load);
