@@ -203,51 +203,59 @@ namespace WindowsFormsApp1
             //OnTextChanged TextBox, TODO's:
 
             //Check if Exist, then Fill Textbox and Numeric
-            sqlQuery = "SELECT alamat `Alamat`, no_telepon `Telepon`, supplier_id `ID` FROM ud_sinar_mas.supplier WHERE UPPER(nama_supplier) = UPPER('" + supplierTextbox.Text + "')";
-            DataTable supplierinfoDt = sqlFunc.selectQuery(sqlQuery);
-
-            if (supplierinfoDt.Rows.Count > 0)
+            try
             {
-                //Exist
-                string alamatSupplier = supplierinfoDt.Rows[0]["Alamat"].ToString();
-                string nomorteleponSupplier = supplierinfoDt.Rows[0]["Telepon"].ToString();
+                sqlQuery = "SELECT alamat `Alamat`, no_telepon `Telepon`, supplier_id `ID` FROM ud_sinar_mas.supplier WHERE UPPER(nama_supplier) = UPPER('" + supplierTextbox.Text + "')";
+                DataTable supplierinfoDt = sqlFunc.selectQuery(sqlQuery);
+                if (supplierinfoDt.Rows.Count > 0)
+                {
+                    //Exist
+                    string alamatSupplier = supplierinfoDt.Rows[0]["Alamat"].ToString();
+                    string nomorteleponSupplier = supplierinfoDt.Rows[0]["Telepon"].ToString();
 
-                string supplierId = supplierinfoDt.Rows[0]["ID"].ToString();
-                string barangId = barangCombobox.SelectedValue.ToString();
-                sqlQuery = "SELECT harga_beli `Harga` FROM ud_sinar_mas.barang_supplier bs WHERE bs.supplier_id = '" + supplierId + "' AND bs.barang_id = '" + barangId + "'";
-                DataTable hargajualDt = sqlFunc.selectQuery(sqlQuery);
-                string hargaJual = hargajualDt.Rows[0]["Harga"].ToString();
+                    string supplierId = supplierinfoDt.Rows[0]["ID"].ToString();
+                    string barangId = barangCombobox.SelectedValue.ToString();
+                    sqlQuery = "SELECT harga_beli `Harga` FROM ud_sinar_mas.barang_supplier bs WHERE bs.supplier_id = '" + supplierId + "' AND bs.barang_id = '" + barangId + "'";
+                    DataTable hargajualDt = sqlFunc.selectQuery(sqlQuery);
+                    string hargaJual = hargajualDt.Rows[0]["Harga"].ToString();
 
-                //Fill Objects
-                alamatTextbox.Text = alamatSupplier;
-                nomorteleponTextbox.Text = nomorteleponSupplier;
-                hargaperliterNumeric.Value = Convert.ToInt32(hargaJual);
+                    //Fill Objects
+                    alamatTextbox.Text = alamatSupplier;
+                    nomorteleponTextbox.Text = nomorteleponSupplier;
+                    hargaperliterNumeric.Value = Convert.ToInt32(hargaJual);
 
-                //Disable Objects
-                alamatTextbox.Enabled = false;
-                nomorteleponTextbox.Enabled = false;
-                hargaperliterNumeric.Enabled = false;
+                    //Disable Objects
+                    alamatTextbox.Enabled = false;
+                    nomorteleponTextbox.Enabled = false;
+                    hargaperliterNumeric.Enabled = false;
 
-                perubahanhargaCheckbox.Checked = false;
-                perubahanhargaCheckbox.Enabled = true;
+                    perubahanhargaCheckbox.Checked = false;
+                    perubahanhargaCheckbox.Enabled = true;
+                }
+                else
+                {
+                    //Not Exist
+
+                    //Empty Objects
+                    alamatTextbox.Text = "";
+                    nomorteleponTextbox.Text = "";
+                    hargaperliterNumeric.Value = 0;
+
+                    //Enable Objects
+                    alamatTextbox.Enabled = true;
+                    nomorteleponTextbox.Enabled = true;
+                    hargaperliterNumeric.Enabled = true;
+
+                    perubahanhargaCheckbox.Checked = false;
+                    perubahanhargaCheckbox.Enabled = false;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                //Not Exist
 
-                //Empty Objects
-                alamatTextbox.Text = "";
-                nomorteleponTextbox.Text = "";
-                hargaperliterNumeric.Value = 0;
-
-                //Enable Objects
-                alamatTextbox.Enabled = true;
-                nomorteleponTextbox.Enabled = true;
-                hargaperliterNumeric.Enabled = true;
-
-                perubahanhargaCheckbox.Checked = false;
-                perubahanhargaCheckbox.Enabled = false;
             }
+
+            
         }
         private void hargaperliterNumeric_ValueChanged(object sender, EventArgs e)
         {

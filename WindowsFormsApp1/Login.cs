@@ -40,35 +40,44 @@ namespace WindowsFormsApp1
         private void BTlogin_Click(object sender, EventArgs e)
         {
             //Button Login OnClick, TODO's:
-
-            //Get User Level
-            string sqlQuery = "SELECT user_level `Level` FROM ud_sinar_mas.user WHERE UPPER(nama) = UPPER('" + tbanama.Text + "') AND pin = " + tbpin.Text + "";
-            DataTable authDt = sqlFunc.selectQuery(sqlQuery);
-
-            //Check if name and password correct
-            if (authDt.Rows.Count > 0)
+            try
             {
-                //Code User Level Ada
-                int userLevel = Convert.ToInt32(authDt.Rows[0]["Level"]);
-                if (userLevel == 0)
+                //Get User Level
+                string sqlQuery = "SELECT user.user_level `Level` FROM ud_sinar_mas.user WHERE UPPER(user.nama) = UPPER('" + tbanama.Text + "') AND pin = " + tbpin.Text + "";
+                DataTable authDt = sqlFunc.selectQuery(sqlQuery);
+
+                //Check if name and password correct
+                if (authDt.Rows.Count > 0)
                 {
-                    var x = new mdi();
-                    x.Show();
+                    //Code User Level Ada
+                    int userLevel = Convert.ToInt32(authDt.Rows[0]["Level"]);
+                    if (userLevel == 0)
+                    {
+                        var x = new mdi();
+                        this.Hide();
+                        x.Show();
+                    }
+                    else
+                    {
+                        var y = new mdiuser();
+                        this.Hide();
+                        y.Show();
+                    }
                 }
                 else
                 {
-                    var y = new mdiuser();
-                    y.Show();
+                    //Code User Level Tidak Ada
+                    MessageBox.Show("Username atau PIN Salah");
+                    tbanama.Text = "";
+                    tbpin.Text = "";
+
                 }
             }
-            else
+            catch(Exception ex)
             {
-                //Code User Level Tidak Ada
-                MessageBox.Show("Password Salah");
-                tbanama.Text = "";
-                tbpin.Text = "";
-   
+                MessageBox.Show("Username atau PIN Salah");                               
             }
+
 
 
             //bool IsDuplicate = false;

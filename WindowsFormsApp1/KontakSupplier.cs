@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
         {
             var ubah = new PopUpTambahkanKontakSupplier();
             ubah.ShowDialog();
+            KontakSupplier_Load(sender, e);
         }
 
         private void dgvkontak_CellContentClick(object sender, DataGridViewCellEventArgs e)

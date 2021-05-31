@@ -19,8 +19,13 @@ namespace WindowsFormsApp1
         }
         public DataTable selectQuery(string queryString)
         {
+
             string query = queryString;
             MySqlCommand sqlCommand = new MySqlCommand(query, connSql);
+            if(connSql.State == ConnectionState.Open)
+            {
+                connSql.Close();
+            }
             connSql.Open();
             MySqlDataAdapter sqlAdapter = new MySqlDataAdapter();
             sqlAdapter.SelectCommand = sqlCommand;
@@ -28,6 +33,8 @@ namespace WindowsFormsApp1
             sqlAdapter.Fill(dt);
             connSql.Close();
             return dt;
+
+
         }
         public void insertQuery(string queryString)
         {

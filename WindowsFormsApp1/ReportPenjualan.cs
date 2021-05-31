@@ -50,12 +50,13 @@ namespace WindowsFormsApp1
             else if (ReportMenu.Reportku == "Sisa Stock" && ReportMenu.Barangku == "All")
             {
                 lreport.Text = "Report Sisa Stock";
-                sql = "SELECT nama_barang 'Barang', nama_supplier 'Supplier', harga_beli 'Harga/Item', jumlah_barang 'Quantity', (jumlah_barang - SUM(jumlah_pemesanan))  'Sisa Stock' FROM barang, barang_supplier, supplier, penjualan_barang_supplier WHERE  barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id AND penjualan_barang_supplier.barang_supplier_id = barang_supplier.barang_supplier_id GROUP BY barang_supplier.barang_supplier_id";
+                sql = "SELECT nama_barang 'Barang', nama_supplier 'Supplier', harga_beli 'Harga/Item', jumlah_barang 'Sisa Stock' FROM barang, barang_supplier, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id GROUP BY barang_supplier.barang_supplier_id";
             }
             else if (ReportMenu.Reportku == "Sisa Stock")
             {
                 lreport.Text = "Report Sisa Stock";
-                sql = "SELECT nama_barang 'Barang', nama_supplier 'Supplier', harga_beli 'Harga/Item', jumlah_barang 'Quantity', (jumlah_barang - SUM(jumlah_pemesanan))  'Sisa Stock' FROM barang, barang_supplier, supplier, penjualan_barang_supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id AND penjualan_barang_supplier.barang_supplier_id = barang_supplier.barang_supplier_id  AND nama_barang ='" + ReportMenu.Barangku + "' GROUP BY barang_supplier.barang_supplier_id";
+                //sql = "SELECT nama_barang 'Barang', nama_supplier 'Supplier', harga_beli 'Harga/Item', jumlah_barang 'Quantity', (jumlah_barang - SUM(jumlah_pemesanan))  'Sisa Stock' FROM barang, barang_supplier, supplier, penjualan_barang_supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id AND penjualan_barang_supplier.barang_supplier_id = barang_supplier.barang_supplier_id GROUP BY barang_supplier.barang_supplier_id";
+                sql = "SELECT nama_barang 'Barang', nama_supplier 'Supplier', harga_beli 'Harga/Item', jumlah_barang 'Sisa Stock' FROM barang, barang_supplier, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id AND nama_barang ='" + ReportMenu.Barangku + "' GROUP BY barang_supplier.barang_supplier_id";
             }
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter dataadapter = new MySqlDataAdapter();

@@ -17,9 +17,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void ReportStock_Load(object sender, EventArgs e)
-        {
-
-        }
+ 
     }
 }

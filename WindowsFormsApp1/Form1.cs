@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public mdi()
         {
             InitializeComponent();
+            FormClosing += FormClosed;
         }
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,6 +114,11 @@ namespace WindowsFormsApp1
             kp.MdiParent = this;
             kp.Show();
             kp.Location = new Point(0, 0);
-        }        
+        }
+
+        void FormClosed(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

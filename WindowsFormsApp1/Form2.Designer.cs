@@ -39,12 +39,13 @@ namespace WindowsFormsApp1
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.reminderToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -54,27 +55,27 @@ namespace WindowsFormsApp1
             this.pembelianToolStripMenuItem,
             this.penjualanToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
             this.menuToolStripMenuItem.Text = "Transaction";
             // 
             // pembelianToolStripMenuItem
             // 
             this.pembelianToolStripMenuItem.Name = "pembelianToolStripMenuItem";
-            this.pembelianToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.pembelianToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.pembelianToolStripMenuItem.Text = "Pembelian";
             this.pembelianToolStripMenuItem.Click += new System.EventHandler(this.pembelianToolStripMenuItem_Click);
             // 
             // penjualanToolStripMenuItem
             // 
             this.penjualanToolStripMenuItem.Name = "penjualanToolStripMenuItem";
-            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.penjualanToolStripMenuItem.Text = "Penjualan";
             this.penjualanToolStripMenuItem.Click += new System.EventHandler(this.penjualanToolStripMenuItem_Click);
             // 
             // reminderToolStripMenuItem
             // 
             this.reminderToolStripMenuItem.Name = "reminderToolStripMenuItem";
-            this.reminderToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.reminderToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.reminderToolStripMenuItem.Text = "Reminder";
             this.reminderToolStripMenuItem.Click += new System.EventHandler(this.reminderToolStripMenuItem_Click);
             // 
@@ -86,6 +87,7 @@ namespace WindowsFormsApp1
             this.IsMdiContainer = true;
             this.Name = "mdiuser";
             this.Text = "Menu Utama";
+            this.Load += new System.EventHandler(this.mdiuser_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

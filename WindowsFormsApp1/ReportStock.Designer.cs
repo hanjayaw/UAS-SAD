@@ -61,8 +61,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "ReportStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Report Sisa Stock";
-            this.Load += new System.EventHandler(this.ReportStock_Load);
+            this.Text = "Report Sisa Stock";            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

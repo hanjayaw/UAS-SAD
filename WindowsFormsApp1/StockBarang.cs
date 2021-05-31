@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         public void StockBarang_Load(object sender, EventArgs e)
         {
             string connectionString = "datasource=localhost;port=3306;user=root;password=;database=ud_sinar_mas";
-            string sql = "SELECT nama_supplier, nama_barang, jumlah_barang, harga_jual, harga_beli FROM `barang`, `barang_supplier`, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id";
+            string sql = "SELECT nama_supplier `Nama Supplier`, nama_barang `Nama Barang`, jumlah_barang `Jumlah Barang`, harga_jual `Harga Jual`, harga_beli `Harga Beli` FROM `barang`, `barang_supplier`, supplier WHERE barang.barang_id = barang_supplier.barang_id AND barang_supplier.supplier_id = supplier.supplier_id";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlDataAdapter dataadapter = new MySqlDataAdapter(sql, connection);
             DataSet ds = new DataSet();
@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "Authors_table";
             dataGridView1.Refresh();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)

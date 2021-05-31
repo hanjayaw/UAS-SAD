@@ -21,5 +21,10 @@ namespace WindowsFormsApp1
         {
 //aku baruinget ini kelihatan
         }
+
+        private void ReportPembelian_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

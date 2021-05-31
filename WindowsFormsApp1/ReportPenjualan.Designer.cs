@@ -38,32 +38,34 @@ namespace WindowsFormsApp1
             // 
             this.lreport.AutoSize = true;
             this.lreport.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lreport.Location = new System.Drawing.Point(524, 37);
-            this.lreport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lreport.Location = new System.Drawing.Point(699, 46);
+            this.lreport.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lreport.Name = "lreport";
-            this.lreport.Size = new System.Drawing.Size(219, 33);
+            this.lreport.Size = new System.Drawing.Size(276, 41);
             this.lreport.TabIndex = 4;
             this.lreport.Text = "Report Penjualan";
             // 
             // dgPenjualan
             // 
             this.dgPenjualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPenjualan.Location = new System.Drawing.Point(12, 92);
+            this.dgPenjualan.Location = new System.Drawing.Point(16, 113);
+            this.dgPenjualan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgPenjualan.Name = "dgPenjualan";
             this.dgPenjualan.RowHeadersWidth = 51;
-            this.dgPenjualan.Size = new System.Drawing.Size(1240, 577);
+            this.dgPenjualan.Size = new System.Drawing.Size(1653, 710);
             this.dgPenjualan.TabIndex = 5;
             // 
             // ReportPenjualan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.dgPenjualan);
             this.Controls.Add(this.lreport);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReportPenjualan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Repor Penjualan";
+            this.Text = "Report";
             this.Load += new System.EventHandler(this.ReportPenjualan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPenjualan)).EndInit();
             this.ResumeLayout(false);

@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public mdiuser()
         {
             InitializeComponent();
+            FormClosing += FormClosed;
         }
 
         private void pembelianToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,6 +52,15 @@ namespace WindowsFormsApp1
             rm.MdiParent = this;
             rm.Show();
             rm.Location = new Point(0, 0);
+        }
+
+        private void mdiuser_Load(object sender, EventArgs e)
+        {
+
+        }
+        void FormClosed(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
